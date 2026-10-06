@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+int main()
+{
+    int i;
+    int intArray[5];
+    float floatArray[5];
+    char charArray[5];
+
+    // Accept integer array
+    printf("Enter 5 integer elements:\n");
+    for (i = 0; i < 5; i++)
+    {
+        scanf("%d", &intArray[i]);
+    }
+
+    // Accept float array
+    printf("\nEnter 5 float elements:\n");
+    for (i = 0; i < 5; i++)
+    {
+        scanf("%f", &floatArray[i]);
+    }
+
+    // Accept character array
+    printf("\nEnter 5 character elements:\n");
+    for (i = 0; i < 5; i++)
+    {
+        scanf(" %c", &charArray[i]);
+    }
+
+    // Display integer array and addresses
+    printf("\nInteger Array:\n");
+    for (i = 0; i < 5; i++)
+    {
+        printf("Value = %d\tAddress = %p\n",
+               intArray[i], (void *)&intArray[i]);
+    }
+
+    // Display float array and addresses
+    printf("\nFloat Array:\n");
+    for (i = 0; i < 5; i++)
+    {
+        printf("Value = %.2f\tAddress = %p\n",
+               floatArray[i], (void *)&floatArray[i]);
+    }
+
+    // Display character array and addresses
+    printf("\nCharacter Array:\n");
+    for (i = 0; i < 5; i++)
+    {
+        printf("Value = %c\tAddress = %p\n",
+               charArray[i], (void *)&charArray[i]);
+    }
+
+    return 0;
+}
